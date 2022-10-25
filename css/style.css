@@ -5,11 +5,25 @@
     font-family: 'Montserrat', sans-serif;
     color: rgb(140, 140, 140);
 }
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 5px 15px;
+    color: white;
+}
+
 h4 {
     font-size: 15px;
     font-weight: 700;
     padding: 5px 0px;
     color: white;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 15px;
 }
 
 i {
@@ -316,17 +330,64 @@ body {
 .container-playbox {
     display: flex;
     flex-flow: row wrap;
-    margin: 20px 15px;
-    gap: 10px;
+    padding: 20px 15px;
+    gap: 15px;
 }
 
-.music{
+.music, .artist{
     max-width: 200px;
     width: 100%;
     min-width: 50px;
+    margin-bottom: 10px;
+    /* background-color: azure; */
+}
 
-    background-color: azure;
-    height: 300px;
+.music-img {
+    width: 100%;
+    position: relative;
+}
+
+.artist-img {
+    width: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.music-img:hover {
+    filter: brightness(0.5);
+}
+
+.music-img:hover > i {
+    display: block;
+}
+
+.music-img img, .artist-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.music-img i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: white;
+}
+
+.music-name {
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 12px;
+}
+
+.music-artist {
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
 }
 @media screen and (max-width: 552px){
 
@@ -350,5 +411,8 @@ body {
     border: transparent;
 }
 
+.container-playbox {
+    justify-content: center;
+}
 
 }
